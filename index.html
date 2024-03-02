@@ -54,80 +54,157 @@
         </div>
       </nav>
       <!-- Banner -->
-      <div class="mt-12 mb-[100px]">
+      <div>
         <div
-          class="p-24 min-h-screen rounded-3xl"
+          class="hero min-h-[65vh] my-10 rounded-3xl"
           style="
             background-image: url(./images/banner.png);
             background-repeat: no-repeat;
           "
         >
-          <div class="hero-overlay bg-opacity-60 rounded-3xl"></div>
-          <div class="text-left text-white">
-            <div class="flex justify-between">
-              <div class="space-y-6">
-                <h2 class="text-6xl font-semibold">
-                  Welcome to the <br />
-                  <span
-                    style="
-                      background: linear-gradient(
-                        90deg,
-                        #797dfc 0.63%,
-                        rgba(121, 125, 252, 0.5) 41%
-                      );
-                      background-clip: text;
-                      -webkit-background-clip: text;
-                      -webkit-text-fill-color: transparent;
-                    "
+          <div class="hero-overlay rounded-3xl"></div>
+          <div
+            class="w-full px-16 text-left text-neutral-content flex justify-between"
+          >
+            <div>
+              <div class="space-y-8">
+                <h1 class="mb-5 leading-[80px] text-6xl font-bold">
+                  Welcome to the <br /><span
+                    class="bg-gradient-to-r from-[#797DFC] to-[#797DFC68] inline-block text-transparent bg-clip-text"
                     >WiKi</span
                   >
                   Forum
-                </h2>
-                <p class="font-medium">
-                  Share your favorite opinion and win and wp <br />
-                  forum coffee mug!
+                </h1>
+                <p class="mb-5">
+                  Share your favorite opinion and win and wp forum coffee mug!
                 </p>
-                <label class="input input-bordered flex items-center gap-2">
+                <label
+                  class="input rounded-3xl input-bordered flex items-center gap-2"
+                >
                   <input
                     type="text"
                     class="grow"
                     placeholder="Search here anything"
                   />
-                  <span
-                    ><button
-                      class="bg-[#797DFC] px-6 py-2 rounded-3xl text-white"
-                    >
-                      Optional
-                    </button></span
+                  <span class="px-10 bg-[#797DFC] text-white rounded-xl"
+                    ><button>Search</button></span
                   >
                 </label>
               </div>
-              <div
-                class="bg-white w-[40%] text-black flex flex-col justify-center p-12 rounded-3xl gap-4"
-              >
-                <div class="flex justify-between">
-                  <p>Registered Users</p>
-                  <p>01</p>
-                </div>
-                <div class="flex justify-between">
-                  <p>Forum</p>
-                  <p>03</p>
-                </div>
-                <div class="flex justify-between">
-                  <p>Topics</p>
-                  <p>02</p>
-                </div>
-                <div class="flex justify-between">
-                  <p>Replies</p>
-                  <p>05</p>
-                </div>
+            </div>
+            <div
+              class="bg-white p-10 rounded-3xl w-[40%] flex flex-col justify-center text-black gap-4"
+            >
+              <div class="flex justify-between">
+                <p>Registered Users</p>
+                <p>04</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Forum</p>
+                <p>02</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Topics</p>
+                <p>03</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Replies</p>
+                <p>05</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <main class="container mx-auto max-w-6xl"></main>
+    <!-- main section -->
+    <main class="container mx-auto max-w-6xl">
+      <!-- discuss section -->
+      <section class="my-24">
+        <!-- discuss title -->
+        <div class="text-center">
+          <h3 class="text-4xl font-bold mb-4">Let’s Discuss</h3>
+          <p class="opacity-80">
+            Yes, you can run unit tests and view the results directly within the
+            app. The <br />
+            integrated testing features allow for a streamlined .
+          </p>
+        </div>
+        <!-- discuss left & right -->
+        <div class="flex gap-6 mt-12 mb-24">
+          <!-- discuss left -->
+          <div
+            style="
+              background-image: url(./images/discuss-bg.png);
+              background-repeat: no-repeat;
+            "
+            class="flex gap-5 p-10 rounded-3xl"
+          >
+            <div>
+              <img src="./images/Ellipse 1.png" alt="" />
+            </div>
+            <div class="flex flex-col space-y-3">
+              <div class="flex gap-6 opacity-80 font-semibold">
+                <p>$ Music</p>
+                <span>Author:Awlad Hossain</span>
+              </div>
+              <h5 class="font-bold text-xl">
+                10 Kids Unaware of Their Halloween Costume
+              </h5>
+              <p class="mb-6 opacity-80">
+                It’s one thing to subject yourself to ha Halloween costume
+                mishap because,<br />
+                hey that’s your prerogative
+              </p>
+              <div class="border-b-2 border-dashed"></div>
+              <div class="flex items-center gap-10 mt-4 opacity-80">
+                <div class="flex gap-2">
+                  <img src="./images/tabler-icon-message-2.png" alt="" />
+                  <p>260</p>
+                </div>
+
+                <div class="flex gap-2">
+                  <img src="./images/tabler-icon-eye.png" alt="" />
+                  <p>1,568</p>
+                </div>
+
+                <div class="flex gap-2">
+                  <img src="./images/tabler-icon-clock-hour-9.png" alt="" />
+                  <p>5 Min</p>
+                </div>
+                <div class="ml-auto">
+                  <button><img src="./images/email 1.png" alt="" /></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- discuss right -->
+          <div
+            style="
+              background-image: url(./images/discuss-bg.png);
+              background-repeat: no-repeat;
+            "
+            class="p-10 rounded-3xl w-[40%]"
+          >
+            <div class="flex justify-between">
+              <h4 class="text-xl font-bold">Title</h4>
+              <div class="flex gap-2">
+                <div><img src="./images/tickmark.png" alt="" /></div>
+                <p>Mark As Read(1)</p>
+              </div>
+            </div>
+            <div class="bg-white p-8 my-4 rounded-2xl flex justify-between">
+              <h5 class="font-bold text-base">
+                10 Kids Unaware of Their Halloween Costume
+              </h5>
+              <div class="flex items-center pr-2">
+                <img src="./images/tabler-icon-eye.png" alt="" />
+                <p>1,568</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
     <!-- script -->
     <script src="./scripts/script.js"></script>
