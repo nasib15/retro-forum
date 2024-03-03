@@ -1,4 +1,6 @@
 const discussSection = document.getElementById("discuss-section");
+const discussLeft = document.getElementById("discuss-left");
+const discussRight = document.getElementById("discuss-right");
 
 // Load data
 
@@ -25,7 +27,7 @@ const displayData = (allPosts) => {
                 background-repeat: no-repeat;
                 background-size: cover;
               "
-              class="flex lg:w-[60%] gap-5 p-10 rounded-3xl"
+              class="flex w-full gap-5 p-10 rounded-3xl"
             >
               <div>
                 <img src=${post.image} class="w-[50px] rounded-3xl" alt="" />
@@ -45,17 +47,17 @@ const displayData = (allPosts) => {
                 <div class="flex items-center gap-10 mt-4 opacity-80">
                   <div class="flex gap-2">
                     <img src="./images/tabler-icon-message-2.png" alt="" />
-                    <p>260</p>
+                    <p>${post.comment_count}</p>
                   </div>
   
                   <div class="flex gap-2">
                     <img src="./images/tabler-icon-eye.png" alt="" />
-                    <p>1,568</p>
+                    <p>${post.view_count}</p>
                   </div>
   
                   <div class="flex gap-2">
                     <img src="./images/tabler-icon-clock-hour-9.png" alt="" />
-                    <p>5 Min</p>
+                    <p>${post.posted_time} Min</p>
                   </div>
                   <div class="ml-auto">
                     <button><img src="./images/email 1.png" alt="" /></button>
@@ -64,11 +66,11 @@ const displayData = (allPosts) => {
               </div>
             </div>
     `;
-    discussSection.appendChild(div);
+    discussLeft.appendChild(div);
   });
 
   const div = document.createElement("div");
-  div.className = "flex flex-col lg:flex-row gap-6 mt-12 mb-24";
+  div.className = "flex flex-col lg:flex-row gap-6";
   div.innerHTML = `
   <div
               style="
@@ -76,7 +78,7 @@ const displayData = (allPosts) => {
                 background-repeat: no-repeat;
                 background-size: cover;
               "
-              class="p-10 rounded-3xl lg:w-[40%]"
+              class="p-10 rounded-3xl"
             >
               <div class="flex justify-between">
                 <h4 class="text-xl font-bold">Title</h4>
@@ -97,7 +99,7 @@ const displayData = (allPosts) => {
             </div>
   
   `;
-  discussSection.appendChild(div);
+  discussRight.appendChild(div);
 };
 
 loadData();
