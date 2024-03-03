@@ -3,6 +3,11 @@ const discussLeft = document.getElementById("discuss-left");
 const discussRight = document.getElementById("discuss-right");
 const markReadContainer = document.getElementById("mark-read-container");
 const latestPostsContainer = document.getElementById("latest-posts-container");
+const markAsRead = document.getElementById("mark-as-read");
+let markAsReadValue = parseInt(
+  document.getElementById("mark-as-read").innerText
+);
+let countMarkAsRead = 0;
 
 // Load data
 
@@ -74,6 +79,12 @@ const displayData = (allPosts) => {
 // Mark Read
 
 const markRead = (event) => {
+  // increase the read count
+  countMarkAsRead += 1;
+
+  // update the count
+  markAsRead.innerText = countMarkAsRead;
+
   const title =
     event.target.parentElement.parentElement.parentElement.parentElement
       .childNodes[3].innerText;
