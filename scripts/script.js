@@ -46,7 +46,7 @@ const displayData = (allPosts) => {
                   ${post.description}
                 </p>
                 <div class="border-b-2 border-dashed"></div>
-                <div class="flex items-center gap-10 mt-4 opacity-80">
+                <div class="flex items-center gap-4 lg:gap-10 mt-4 opacity-80">
                   <div class="flex gap-2">
                     <img src="./images/tabler-icon-message-2.png" alt="" />
                     <p>${post.comment_count}</p>
@@ -106,7 +106,6 @@ const latestPosts = async () => {
   const posts = await res.json();
 
   posts.forEach((post) => {
-    console.log(post);
     const div = document.createElement("div");
     div.innerHTML = `
     <div class="mt-12">
@@ -149,6 +148,20 @@ const latestPosts = async () => {
 
     latestPostsContainer.appendChild(div);
   });
+};
+
+const search = async () => {
+  const searchFieldValue = document.getElementById("search-field").value;
+
+  const res = await fetch(
+    `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchFieldValue}`
+  );
+  const data = await res.json();
+  const posts = data.posts;
+
+  discussLeft.innerHTML = "";
+  discussRight.innerHTML = "";
+  displayData(posts);
 };
 
 loadData();
