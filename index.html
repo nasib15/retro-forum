@@ -12,6 +12,13 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- style css -->
     <style>
       .mulish {
@@ -136,6 +143,7 @@
             style="
               background-image: url(./images/discuss-bg.png);
               background-repeat: no-repeat;
+              background-size: cover;
             "
             class="flex gap-5 p-10 rounded-3xl"
           >
@@ -182,6 +190,7 @@
             style="
               background-image: url(./images/discuss-bg.png);
               background-repeat: no-repeat;
+              background-size: cover;
             "
             class="p-10 rounded-3xl w-[40%]"
           >
@@ -204,8 +213,89 @@
           </div>
         </div>
       </section>
+      <!-- forum section -->
+      <section class="flex">
+        <div
+          style="
+            background-image: url('./images/forum-banner.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+          "
+          class="text-white rounded-3xl"
+        >
+          <div class="flex items-center justify-between pl-24 py-10">
+            <div class="space-y-8">
+              <h3 class="text-4xl font-bold mb-4">Join Our Forum</h3>
+              <p class="opacity-80">
+                Share your favorite opinion and win and wp forum coffee mug!
+                <br />Yes, you can run unit tests and view the results directly
+                within the app.
+              </p>
+              <button class="bg-[#797DFC] px-10 py-2 rounded-3xl mt-4">
+                Register Now
+              </button>
+            </div>
+            <div>
+              <img src="./images/joinforum.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Latest post section -->
+      <section class="my-24">
+        <!-- Latest post titles -->
+        <div class="text-center">
+          <h3 class="text-4xl font-bold mb-4">Latest Posts</h3>
+          <p class="opacity-80">
+            Yes, you can run unit tests and view the results directly within the
+            app. The <br />
+            integrated testing features allow for a streamlined .
+          </p>
+        </div>
+        <!-- latest post cards -->
+        <div class="mt-12">
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img
+                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="Shoes"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="card-body text-left space-y-2">
+              <h2 class="font-extrabold text-lg">
+                What will a mars habitat force that impact in our daily life!!!
+              </h2>
+              <p class="opacity-80">
+                Yes, you can run unit tests and view the results directly within
+                the app.
+              </p>
+              <div class="flex items-center gap-4">
+                <div>
+                  <img src="./images/Ellipse 1.png" alt="" />
+                </div>
+                <div>
+                  <h4>Cameron Williamson</h4>
+                  <p>ROR Developer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <!-- Footer section -->
+    <footer class="bg-[#12132D18] text-black">
+      <div>
+        <h4>WiKi Forum</h4>
+        <p>
+          Contrary to popular belief, Lorem Ipsum is not simply random text.
+          <br />It has roots in a piece of classical Latin literature from 45 BC
+        </p>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+    </footer>
     <!-- script -->
     <script src="./scripts/script.js"></script>
   </body>
