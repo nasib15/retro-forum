@@ -152,7 +152,9 @@
         <!-- discuss left & right -->
         <div id="discuss-section" class="flex justify-between gap-6">
           <div id="discuss-left"></div>
-          <div id="discuss-right"></div>
+          <div id="discuss-right">
+            <div id="mark-read-container"></div>
+          </div>
         </div>
       </section>
       <!-- forum section -->
@@ -196,35 +198,10 @@
           </p>
         </div>
         <!-- latest post cards -->
-        <div class="mt-12 flex flex-col lg:flex-row">
-          <div class="card lg:w-96 bg-base-100 shadow-xl">
-            <figure class="px-10 pt-10">
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-                class="rounded-xl"
-              />
-            </figure>
-            <div class="card-body text-left space-y-2">
-              <h2 class="font-extrabold text-lg">
-                What will a mars habitat force that impact in our daily life!!!
-              </h2>
-              <p class="opacity-80">
-                Yes, you can run unit tests and view the results directly within
-                the app.
-              </p>
-              <div class="flex items-center gap-4">
-                <div>
-                  <img src="./images/Ellipse 1.png" alt="" />
-                </div>
-                <div>
-                  <h4>Cameron Williamson</h4>
-                  <p>ROR Developer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div
+          id="latest-posts-container"
+          class="flex gap-6 flex-col lg:flex-row"
+        ></div>
       </section>
     </main>
     <!-- Footer section -->
