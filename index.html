@@ -40,20 +40,32 @@
       <nav>
         <div class="navbar bg-base-100 flex items-center">
           <div class="navbar-start">
-            <a class="btn btn-ghost text-xl">WiKi </a>
+            <a class="btn btn-ghost text-4xl font-extrabold">WiKi </a>
           </div>
 
           <div class="navbar-end">
-            <button title="Home" class="btn btn-ghost btn-circle">
+            <button
+              class="tooltip tooltip-bottom btn btn-ghost btn-circle flex justify-center"
+              data-tip="Home"
+            >
               <img src="./images/home.png" alt="" />
             </button>
-            <button title="Edit" class="btn btn-ghost btn-circle">
+            <button
+              class="tooltip tooltip-bottom btn btn-ghost btn-circle flex justify-center"
+              data-tip="Edit"
+            >
               <img src="./images/edit.png" alt="" />
             </button>
-            <button title="Add" class="btn btn-ghost btn-circle">
+            <button
+              class="tooltip tooltip-bottom btn btn-ghost btn-circle flex justify-center"
+              data-tip="Add"
+            >
               <img src="./images/add.png" alt="" />
             </button>
-            <button title="Flag" class="btn btn-ghost btn-circle">
+            <button
+              class="tooltip tooltip-bottom btn btn-ghost btn-circle flex justify-center"
+              data-tip="Flag"
+            >
               <img src="./images/flag.png" alt="" />
             </button>
             <a class="btn bg-[#797DFC] text-white rounded-3xl px-6">Sign In</a>
@@ -287,13 +299,32 @@
     </main>
     <!-- Footer section -->
     <footer class="bg-[#12132D18] text-black">
-      <div>
-        <h4>WiKi Forum</h4>
-        <p>
+      <div class="text-center p-24 space-y-6">
+        <h4 class="text-4xl font-extrabold">WiKi Forum</h4>
+        <p class="opacity-80">
           Contrary to popular belief, Lorem Ipsum is not simply random text.
           <br />It has roots in a piece of classical Latin literature from 45 BC
         </p>
-        <i class="fa-brands fa-twitter"></i>
+        <div class="flex gap-5 justify-center text-3xl">
+          <a href="https://www.twitter.com" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="https://www.facebook.com" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.youtube.com" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="https://www.github.com" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+        <div
+          class="container max-w-6xl mx-auto border-t-2 border-[#00000010]"
+        ></div>
+        <div>
+          <p class="opacity-80">© 2024 WiKi Forum. All rights reserved.</p>
+        </div>
       </div>
     </footer>
     <!-- script -->
