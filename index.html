@@ -102,10 +102,10 @@
                   class="input rounded-3xl input-bordered flex items-center gap-2"
                 >
                   <input
-                  id="search-field"
+                    id="search-field"
                     type="text"
                     class="grow text-black"
-                    placeholder="Search here anything" 
+                    placeholder="Search here anything"
                   />
                   <span class="px-10 bg-[#797DFC] text-white rounded-xl"
                     ><button onclick="search()">Search</button></span
@@ -155,9 +155,27 @@
           id="discuss-section"
           class="flex flex-col lg:flex-row justify-between gap-6"
         >
+          <!-- discuss left -->
           <div id="discuss-left"></div>
-          <div id="discuss-right">
-            <div id="mark-read-container"></div>
+          <!-- discuss right -->
+          <div class="w-[40%]">
+            <div
+              id="discuss-right"
+              style="
+                background-image: url(./images/discuss-bg.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+              class="p-10 rounded-3xl"
+            >
+              <div class="flex justify-between">
+                <h4 class="text-xl font-bold">Title</h4>
+                <div class="flex gap-2">
+                  <div><img src="./images/tickmark.png" alt="" /></div>
+                  <p>Mark As Read (<span>0</span>)</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

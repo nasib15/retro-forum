@@ -19,7 +19,6 @@ const loadData = async () => {
 
 const displayData = (allPosts) => {
   allPosts.forEach((post) => {
-    // console.log(post);
     const div = document.createElement("div");
     div.className = "flex flex-col lg:flex-row gap-6 mb-10";
     div.innerHTML = `
@@ -62,7 +61,7 @@ const displayData = (allPosts) => {
                     <p>${post.posted_time} Min</p>
                   </div>
                   <div class="ml-auto">
-                    <button class="read-btn"><img src="./images/email 1.png" alt="" /></button>
+                    <button onclick="markRead(event)" class="read-btn"><img src="./images/email 1.png" alt="" /></button>
                   </div>
                 </div>
               </div>
@@ -70,32 +69,35 @@ const displayData = (allPosts) => {
     `;
     discussLeft.appendChild(div);
   });
-
-  const div = document.createElement("div");
-  div.className = "flex flex-col lg:flex-row gap-10";
-  div.innerHTML = `
-  <div
-              style="
-                background-image: url(./images/discuss-bg.png);
-                background-repeat: no-repeat;
-                background-size: cover;
-              "
-              class="p-10 rounded-3xl "
-            >
-              <div class="flex gap-[60px] justify-between">
-                <h4 class="text-xl font-bold">Title</h4>
-                <div class="flex gap-2">
-                  <div><img src="./images/tickmark.png" alt="" /></div>
-                  <p>Mark As Read(0)</p>
-                </div>
-              </div>
-            </div>
-  
-  `;
-  discussRight.appendChild(div);
 };
 
 // Mark Read
+
+const markRead = (event) => {
+  const title =
+    event.target.parentElement.parentElement.parentElement.parentElement
+      .childNodes[3].innerText;
+
+  const views =
+    event.target.parentElement.parentElement.parentElement.parentElement
+      .childNodes[9].childNodes[3].childNodes[3].innerText;
+
+  const div = document.createElement("div");
+
+  div.innerHTML = `
+    <div class="bg-white p-8 my-4 rounded-2xl flex justify-between">
+              <h5 class="font-bold text-base">
+                ${title}
+              </h5>
+              <div class="flex items-center pr-2">
+                <img src="./images/tabler-icon-eye.png" alt="" />
+                <p>${views}</p>
+              </div>
+            </div>
+    
+    `;
+  discussRight.appendChild(div);
+};
 
 // Latest posts
 
@@ -149,6 +151,8 @@ const latestPosts = async () => {
     latestPostsContainer.appendChild(div);
   });
 };
+
+// search functionality
 
 const search = async () => {
   const searchFieldValue = document.getElementById("search-field").value;
