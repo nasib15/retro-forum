@@ -37,7 +37,11 @@ const displayData = (allPosts) => {
               class="flex w-full gap-5 p-10 rounded-3xl"
             >
               <div>
-                <div class="avatar ${post.isActive ? "online" : "offline"}">
+                <div class="avatar ${
+                  post.isActive
+                    ? "online"
+                    : "before:bg-red-600 before:rounded-full before:w-[16%] before:h-[16%] before:absolute before:right-[6%] before:top-[6%] before:outline-2 before:outline-white before:outline"
+                }">
                     <div class="w-[50px] rounded-full">
                         <img src=${post.image} />
                     </div>
@@ -192,7 +196,5 @@ const search = async () => {
 };
 
 loadData();
-
-activeStatus();
 
 latestPosts();
