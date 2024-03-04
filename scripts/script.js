@@ -1,3 +1,4 @@
+const discussMainContainer = document.getElementById("discuss-main-container");
 const discussSection = document.getElementById("discuss-section");
 const discussLeft = document.getElementById("discuss-left");
 const discussRight = document.getElementById("discuss-right");
@@ -36,7 +37,11 @@ const displayData = (allPosts) => {
               class="flex w-full gap-5 p-10 rounded-3xl"
             >
               <div>
-                <img src=${post.image} class="w-[50px] rounded-3xl" alt="" />
+                <div class="avatar ${post.isActive ? "online" : "offline"}">
+                    <div class="w-[50px] rounded-full">
+                        <img src=${post.image} />
+                    </div>
+                </div>
               </div>
               <div class="flex flex-col lg:w-full space-y-3">
                 <div class="flex gap-6 opacity-80 font-semibold">
@@ -131,6 +136,14 @@ const latestPosts = async () => {
                 />
               </figure>
               <div class="card-body text-left space-y-2">
+                <div class="flex gap-2">
+                    <img src="./images/calendar.png" alt="">
+                    <p>${
+                      post.author.posted_date
+                        ? post.author.posted_date
+                        : "No Publish Date"
+                    }</p>
+                </div>
                 <h2 class="font-extrabold text-lg">
                   ${post.title}
                 </h2>
@@ -175,10 +188,11 @@ const search = async () => {
   const posts = data.posts;
 
   discussLeft.innerHTML = "";
-  discussRight.innerHTML = "";
   displayData(posts);
 };
 
 loadData();
+
+activeStatus();
 
 latestPosts();
