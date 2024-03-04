@@ -177,32 +177,42 @@ const latestPosts = async () => {
 // search functionality
 
 const search = async () => {
-  const searchFieldValue = document.getElementById("search-field").value;
+  const searchFieldValue = document
+    .getElementById("search-field")
+    .value.toLowerCase();
 
-  const res = await fetch(
-    `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchFieldValue}`
-  );
-  const data = await res.json();
-  const posts = data.posts;
+  if (
+    searchFieldValue === "coding" ||
+    searchFieldValue === "comedy" ||
+    searchFieldValue === "music"
+  ) {
+    const res = await fetch(
+      `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchFieldValue}`
+    );
+    const data = await res.json();
+    const posts = data.posts;
 
-  //   hidden left and right and show spinner
-  discussLeft.classList.add("hidden");
-  discussRight.classList.add("hidden");
-  document.getElementById("loading-spinner").innerHTML = `
-      <span class="loading loading-spinner loading-lg block mx-auto"></span>
-    `;
+    //   hidden left and right and show spinner
+    discussLeft.classList.add("hidden");
+    discussRight.classList.add("hidden");
+    document.getElementById("loading-spinner").innerHTML = `
+              <span class="loading loading-spinner loading-lg block mx-auto"></span>
+            `;
 
-  //   Set timeout for late data display and remove the spinner
+    //   Set timeout for late data display and remove the spinner
 
-  setTimeout(() => {
-    discussLeft.classList.remove("hidden");
-    discussRight.classList.remove("hidden");
-    document.getElementById("loading-spinner").innerHTML = "";
+    setTimeout(() => {
+      discussLeft.classList.remove("hidden");
+      discussRight.classList.remove("hidden");
+      document.getElementById("loading-spinner").innerHTML = "";
 
-    // Clearing previous left side data
-    discussLeft.innerHTML = "";
-    displayData(posts);
-  }, 2000);
+      // Clearing previous left side data
+      discussLeft.innerHTML = "";
+      displayData(posts);
+    }, 2000);
+  } else {
+    alert("Please enter a valid category");
+  }
 };
 
 loadData();
