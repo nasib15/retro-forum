@@ -35,52 +35,49 @@
   </head>
   <body class="mulish">
     <!-- Header section -->
-    <header class="container mx-auto max-w-6xl p-4 lg:p-0 mt-6">
+    <header class="container mx-auto max-w-6xl p-4 lg:p-0 lg:mt-6">
       <!-- Nav Bar -->
       <nav>
         <div class="navbar bg-base-100 flex items-center">
           <div class="navbar-start">
-            <a class="btn btn-ghost text-4xl font-extrabold">WiKi </a>
+            <a class="btn btn-ghost text-4xl font-black">WiKi </a>
           </div>
 
           <div class="navbar-end gap-3">
             <button
-              class="tooltip tooltip-bottom btn btn-circle flex justify-center bg-[rgba(18, 19, 45, 0.03)]"
+              class="hidden lg:flex tooltip tooltip-bottom btn btn-circle lg:justify-center bg-[rgba(18, 19, 45, 0.03)]"
               data-tip="Home"
             >
               <img src="./images/home.png" alt="" />
             </button>
             <button
-              class="tooltip tooltip-bottom btn btn-circle flex justify-center"
+              class="hidden lg:flex tooltip tooltip-bottom btn btn-circle lg:justify-center"
               data-tip="Edit"
             >
               <img src="./images/edit.png" alt="" />
             </button>
             <button
-              class="tooltip tooltip-bottom btn btn-circle flex justify-center"
+              class="hidden lg:flex tooltip tooltip-bottom btn btn-circle lg:justify-center"
               data-tip="Add"
             >
               <img src="./images/add.png" alt="" />
             </button>
             <button
-              class="tooltip tooltip-bottom btn btn-circle flex justify-center"
+              class="hidden lg:flex tooltip tooltip-bottom btn btn-circle lg:justify-center"
               data-tip="Flag"
             >
               <img src="./images/flag.png" alt="" />
             </button>
-            <a class="btn bg-[#797DFC] text-white rounded-3xl px-6">Sign In</a>
+            <a class="btn bg-[#797DFC] text-white text-lg rounded-3xl px-6"
+              >Sign In</a
+            >
           </div>
         </div>
       </nav>
       <!-- Banner -->
       <div>
         <div
-          class="hero min-h-[65vh] mt-10 rounded-3xl p-8 lg:p-0"
-          style="
-            background-image: url(./images/banner.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-          "
+          class="hero min-h-[550px] mt-10 rounded-3xl p-8 lg:p-0 bg-[#12132D] bg-[url('./images/bgbanner.png')] bg-no-repeat bg-bottom"
         >
           <div class="rounded-3xl"></div>
           <div
@@ -88,18 +85,21 @@
           >
             <div>
               <div class="space-y-8">
-                <h1 class="mb-5 leading-[80px] text-6xl font-bold">
+                <h1
+                  class="mb-5 leading-[70px] lg:leading-[80px] text-5xl lg:text-6xl font-black"
+                >
                   Welcome to the <br /><span
                     class="bg-gradient-to-r from-[#797DFC] to-[#797DFC68] inline-block text-transparent bg-clip-text"
                     >WiKi</span
                   >
                   Forum
                 </h1>
-                <p class="mb-5">
-                  Share your favorite opinion and win and wp forum coffee mug!
+                <p class="mb-5 text-lg font-medium px-5 lg:px-0 lg:w-[460px]">
+                  Explore our forums, where engaging discussions await! Share
+                  your thoughts and be part of a vibrant community.
                 </p>
                 <label
-                  class="input rounded-3xl input-bordered flex items-center gap-2"
+                  class="input h-14 rounded-[50px] input-bordered flex items-center gap-2"
                 >
                   <input
                     id="search-field"
@@ -107,28 +107,28 @@
                     class="grow text-black"
                     placeholder="Search here anything"
                   />
-                  <span class="px-10 bg-[#797DFC] text-white rounded-xl"
+                  <span class="px-10 py-2 bg-[#797DFC] text-white rounded-3xl"
                     ><button onclick="search()">Search</button></span
                   >
                 </label>
               </div>
             </div>
             <div
-              class="bg-white p-10 mt-10 lg:mt-0 rounded-3xl lg:w-[40%] flex flex-col justify-center text-black gap-4"
+              class="bg-white p-10 mt-10 lg:mt-0 rounded-3xl lg:w-[40%] flex flex-col justify-center gap-4 text-black text-2xl"
             >
-              <div class="flex justify-between">
+              <div class="flex justify-between opacity-80">
                 <p>Registered Users</p>
                 <p>04</p>
               </div>
-              <div class="flex justify-between">
+              <div class="flex justify-between opacity-80">
                 <p>Forum</p>
                 <p>02</p>
               </div>
-              <div class="flex justify-between">
+              <div class="flex justify-between opacity-80">
                 <p>Topics</p>
                 <p>03</p>
               </div>
-              <div class="flex justify-between">
+              <div class="flex justify-between opacity-80">
                 <p>Replies</p>
                 <p>05</p>
               </div>
@@ -140,14 +140,14 @@
     <!-- main section -->
     <main class="container mx-auto max-w-6xl p-4 lg:p-0">
       <!-- discuss section -->
-      <section class="my-24">
+      <section class="lg:my-24 my-16">
         <!-- discuss title -->
         <div class="text-center mb-12">
-          <h3 class="text-4xl font-bold mb-4">Let’s Discuss</h3>
-          <p class="opacity-80">
-            Yes, you can run unit tests and view the results directly within the
-            app.<br />
-            The integrated testing features allow for a streamlined .
+          <h3 class="text-4xl font-black mb-4">Let’s Discuss</h3>
+          <p class="opacity-80 px-5 lg:px-0 lg:w-[600px] mx-auto">
+            Join the 'Let's Discuss' section for lively conversations! Dive into
+            diverse topics, share your views, and connect with a community
+            passionate about meaningful dialogue. Your voice matters—let's talk!
           </p>
         </div>
         <!-- discuss left & right -->
@@ -162,7 +162,7 @@
               class="p-10 rounded-3xl bg-[#F3F3F5] border border-white"
             >
               <div class="flex justify-between">
-                <h4 class="text-xl font-bold">Title</h4>
+                <h4 class="text-xl font-extrabold">Title</h4>
                 <div class="flex gap-2">
                   <div><img src="./images/tickmark.png" alt="" /></div>
                   <p>Mark As Read (<span id="mark-as-read">0</span>)</p>
@@ -174,46 +174,40 @@
       </section>
       <!-- forum section -->
       <section class="flex">
-        <div
-          style="
-            background-image: url('./images/forum-banner.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 100%;
-          "
-          class="text-white rounded-3xl"
-        >
+        <div class="text-white rounded-3xl bg-[#12132D] w-full">
           <div
             class="flex flex-col-reverse text-center lg:text-left lg:flex-row items-center justify-between lg:pl-24 py-10"
           >
             <div class="space-y-10">
-              <h3 class="text-4xl font-bold mt-14 lg:mt-0 mb-4">
+              <h3 class="text-4xl font-extrabold mt-14 lg:mt-0 mb-4">
                 Join Our Forum
               </h3>
-              <p class="opacity-80">
-                Share your favorite opinion and win and wp forum coffee mug!
-                <br />Yes, you can run unit tests and view the results directly
-                within the app.
+              <p class="opacity-80 px-5 lg:px-0 lg:w-[460px] mx-auto">
+                Join our vibrant community by participating in our forum!
+                Connect with like-minded individuals, share experiences, and
+                engage in lively discussions on a variety of topics.
               </p>
-              <button class="bg-[#797DFC] px-10 py-2 rounded-3xl mt-4">
+              <button
+                class="bg-[#797DFC] px-10 py-3 rounded-3xl mt-4 font-extrabold"
+              >
                 Register Now
               </button>
             </div>
-            <div>
+            <div class="lg:pr-14">
               <img src="./images/joinforum.png" alt="" />
             </div>
           </div>
         </div>
       </section>
       <!-- Latest post section -->
-      <section class="my-24">
+      <section class="lg:my-24 my-16">
         <!-- Latest post titles -->
         <div class="text-center">
-          <h3 class="text-4xl font-bold mb-4">Latest Posts</h3>
-          <p class="opacity-80">
-            Yes, you can run unit tests and view the results directly within the
-            app. The <br />
-            integrated testing features allow for a streamlined .
+          <h3 class="text-4xl font-black mb-4">Latest Posts</h3>
+          <p class="opacity-80 px-5 lg:px-0 lg:w-[600px] mx-auto">
+            Stay informed and entertained with our latest posts! Discover fresh
+            content regularly to keep up with the latest developments and
+            discover something new each time you visit.
           </p>
         </div>
         <!-- latest post cards -->
@@ -226,7 +220,7 @@
     <!-- Footer section -->
     <footer class="bg-[#12132D18] text-black">
       <div class="text-center p-24 space-y-6">
-        <h4 class="text-4xl font-extrabold">WiKi Forum</h4>
+        <h4 class="text-4xl font-black">WiKi Forum</h4>
         <p class="opacity-80">
           Don't miss out on the fun! Follow us on social media and subscribe for
           updates, insights, and maybe a surprise or two.

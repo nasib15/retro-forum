@@ -46,13 +46,13 @@ const displayData = (allPosts) => {
                   <p># ${post.category}</p>
                   <span>Author: ${post.author.name}</span>
                 </div>
-                <h5 class="font-bold text-xl">
+                <h5 class="font-extrabold text-xl">
                   ${post.title}
                 </h5>
                 <p class="mb-6 opacity-80 border-b-2 pb-5 border-dashed">
                   ${post.description}
                 </p>
-                <div class="flex items-center gap-4 lg:gap-10 mt-4 opacity-80">
+                <div class="flex items-center justify-center gap-3 lg:gap-10 mt-4 opacity-80">
                   <div class="flex gap-2">
                     <img src="./images/tabler-icon-message-2.png" alt="" />
                     <p>${post.comment_count}</p>
