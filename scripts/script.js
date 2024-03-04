@@ -25,15 +25,10 @@ const loadData = async () => {
 const displayData = (allPosts) => {
   allPosts.forEach((post) => {
     const div = document.createElement("div");
-    div.className = "flex flex-col lg:flex-row gap-6 mb-10";
+    div.className = "flex flex-col lg:flex-row gap-6 mb-10 ";
     div.innerHTML = `
     <div
-              style="
-                background-image: url(./images/discuss-bg.png);
-                background-repeat: no-repeat;
-                background-size: cover;
-              "
-              class="flex w-full gap-5 p-10 rounded-3xl"
+              class="flex w-full gap-5 p-10 rounded-3xl border border-white hover:bg-[#797DFC15] hover:border-[#797DFC] bg-[#F3F3F5]"
             >
               <div>
                 <div class="avatar ${
@@ -54,10 +49,9 @@ const displayData = (allPosts) => {
                 <h5 class="font-bold text-xl">
                   ${post.title}
                 </h5>
-                <p class="mb-6 opacity-80">
+                <p class="mb-6 opacity-80 border-b-2 pb-5 border-dashed">
                   ${post.description}
                 </p>
-                <div class="border-b-2 border-dashed"></div>
                 <div class="flex items-center gap-4 lg:gap-10 mt-4 opacity-80">
                   <div class="flex gap-2">
                     <img src="./images/tabler-icon-message-2.png" alt="" />
@@ -99,7 +93,7 @@ const markRead = (event) => {
 
   const views =
     event.target.parentElement.parentElement.parentElement.parentElement
-      .childNodes[9].childNodes[3].childNodes[3].innerText;
+      .childNodes[7].childNodes[3].childNodes[3].innerText;
 
   const div = document.createElement("div");
 
@@ -128,6 +122,7 @@ const latestPosts = async () => {
 
   posts.forEach((post) => {
     const div = document.createElement("div");
+    div.className = "flex-1 ";
     div.innerHTML = `
     <div class="mt-12">
             <div class="card bg-base-100 shadow-xl">
@@ -147,7 +142,7 @@ const latestPosts = async () => {
                         : "No Publish Date"
                     }</p>
                 </div>
-                <h2 class="font-extrabold text-lg">
+                <h2 class="font-extrabold text-2xl">
                   ${post.title}
                 </h2>
                 <p class="opacity-80">
