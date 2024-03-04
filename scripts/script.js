@@ -1,8 +1,7 @@
-const discussMainContainer = document.getElementById("discuss-main-container");
-const discussSection = document.getElementById("discuss-section");
+// Declare variables
+
 const discussLeft = document.getElementById("discuss-left");
 const discussRight = document.getElementById("discuss-right");
-const markReadContainer = document.getElementById("mark-read-container");
 const latestPostsContainer = document.getElementById("latest-posts-container");
 const markAsRead = document.getElementById("mark-as-read");
 let markAsReadValue = parseInt(
@@ -191,8 +190,24 @@ const search = async () => {
   const data = await res.json();
   const posts = data.posts;
 
-  discussLeft.innerHTML = "";
-  displayData(posts);
+  //   hidden left and right and show spinner
+  discussLeft.classList.add("hidden");
+  discussRight.classList.add("hidden");
+  document.getElementById("loading-spinner").innerHTML = `
+      <span class="loading loading-spinner loading-lg block mx-auto"></span>
+    `;
+
+  //   Set timeout for late data display and remove the spinner
+
+  setTimeout(() => {
+    discussLeft.classList.remove("hidden");
+    discussRight.classList.remove("hidden");
+    document.getElementById("loading-spinner").innerHTML = "";
+
+    // Clearing previous left side data
+    discussLeft.innerHTML = "";
+    displayData(posts);
+  }, 2000);
 };
 
 loadData();
